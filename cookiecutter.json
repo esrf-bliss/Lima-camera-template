@@ -1,0 +1,10 @@
+{
+  "project_name": "MyCamera",
+  "folder_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
+  "namespace_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
+  "macro_prefix": "LIMA_{{cookiecutter.project_name|upper}}",
+  "lowercase_projectname": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
+  "uppercase_projectname": "{{ cookiecutter.project_name|upper|replace(' ', '_') }}",
+  "build_for_windows": true,
+  "build_for_linux": true
+}
