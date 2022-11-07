@@ -73,15 +73,19 @@ endif()
 
 
 # Find SDK library
-find_package(SDK REQUIRED)
+# TODO: Uncomment when cmake/FindSDK.cmake has been implemented
+# find_package(SDK REQUIRED)
 
-file(GLOB_RECURSE MYCAMERA_INCS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h")
+file(GLOB_RECURSE CAMERA_INCS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h")
 
 # Library definition
 add_library({{cookiecutter.lowercase_projectname}} SHARED
   src/{{cookiecutter.project_name}}Camera.cpp
   src/{{cookiecutter.project_name}}Interface.cpp
-  ${MYCAMERA_INCS}
+  src/{{cookiecutter.project_name}}DetInfoCtrlObj.cpp
+  src/{{cookiecutter.project_name}}ShutterCtrlObj.cpp
+  src/{{cookiecutter.project_name}}SyncCtrlObj.cpp
+  ${CAMERA_INCS}
 )
 
 # Generate export macros
@@ -102,11 +106,8 @@ target_include_directories({{cookiecutter.lowercase_projectname}}
 
 target_link_libraries({{cookiecutter.lowercase_projectname}} PUBLIC limacore)
 
-target_compile_definitions({{cookiecutter.lowercase_projectname}} PUBLIC ${SDK_DEFINITIONS})
-
-target_include_directories({{cookiecutter.lowercase_projectname}} PUBLIC ${SDK_INCLUDE_DIRS})
-
-target_link_libraries({{cookiecutter.lowercase_projectname}} PUBLIC ${SDK_LIBRARIES})
+# TODO: Uncomment when cmake/FindSDK.cmake has been implemented
+#target_compile_definitions({{cookiecutter.lowercase_projectname}} PUBLIC SDK::SDK)
 
 if(WIN32)
   target_compile_definitions({{cookiecutter.lowercase_projectname}}

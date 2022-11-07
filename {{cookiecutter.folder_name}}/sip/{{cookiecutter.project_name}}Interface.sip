@@ -22,15 +22,15 @@
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //###########################################################################
 
-namespace {{cookiecutter.project_name}}
+namespace {{cookiecutter.namespace_name}}
 {
   class Interface : HwInterface
   {
 %TypeHeaderCode
-#include <{{cookiecutter.project_name}}Interface.h>
+#include <{{cookiecutter.include_folder}}/Interface.h>
 %End
   public:
-    Interface({{cookiecutter.project_name}}::Camera& cam /KeepReference/);
+    Interface({{cookiecutter.namespace_name}}::Camera& cam /KeepReference/);
     virtual ~Interface();
 
     //- From HwInterface
@@ -42,5 +42,7 @@ namespace {{cookiecutter.project_name}}
     virtual void 	getStatus(StatusType& status /Out/);
     virtual int 	getNbHwAcquiredFrames();
 
+  private:
+    Interface(const {{cookiecutter.namespace_name}}::Interface&);
   };
 };

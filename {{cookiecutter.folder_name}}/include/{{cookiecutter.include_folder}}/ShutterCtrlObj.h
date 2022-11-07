@@ -22,19 +22,20 @@
 
 #pragma once
 
-#if !defined(LIMA_IRIS_SHUTTERCTRLOBJ_H)
-#define LIMA_IRIS_SHUTTERCTRLOBJ_H
-
 #include "lima/HwInterface.h"
 
-#include "iris/Camera.h"
+#include <{{cookiecutter.project_name}}_export.h>
 
-namespace lima {
-namespace Iris {
+#include "{{cookiecutter.include_folder}}/Camera.h"
+
+namespace lima
+{
+namespace {{cookiecutter.namespace_name}}
+{
 
 /// Control object providing camera shutter interface
-class ShutterCtrlObj : public HwShutterCtrlObj {
-  DEB_CLASS_NAMESPC(DebModCamera, "ShutterCtrlObj", "Iris");
+class {{cookiecutter.uppercase_projectname}}_EXPORT ShutterCtrlObj : public HwShutterCtrlObj {
+  DEB_CLASS_NAMESPC(DebModCamera, "ShutterCtrlObj", "{{cookiecutter.project_name}}");
 
 public:
   enum CamShutterMode { FRAME, MANUAL };
@@ -66,5 +67,3 @@ private:
 } // namespace Iris
 
 } // namespace lima
-
-#endif // !defined(LIMA_IRIS_SHUTTERCTRLOBJ_H)

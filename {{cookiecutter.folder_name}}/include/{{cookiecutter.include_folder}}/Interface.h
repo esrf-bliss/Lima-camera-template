@@ -21,8 +21,8 @@
 // You should have received a copy of the GNU General Public License
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //###########################################################################
-#ifndef {{cookiecutter.macro_prefix}}_INTERFACE_H
-#define {{cookiecutter.macro_prefix}}_INTERFACE_H
+
+#pragma once
 
 #include <{{cookiecutter.project_name}}_export.h>
 
@@ -32,7 +32,9 @@ namespace lima
 {
 namespace {{cookiecutter.namespace_name}}
 {
-  class MYCAMERA_EXPORT Interface : public HwInterface
+  class Camera;
+  
+  class {{cookiecutter.uppercase_projectname}}_EXPORT Interface : public HwInterface
   {
     DEB_CLASS_NAMESPC(DebModCamera, "{{cookiecutter.project_name}}Interface", "{{cookiecutter.project_name}}");
 
@@ -54,5 +56,3 @@ namespace {{cookiecutter.namespace_name}}
 
 } // namespace {{cookiecutter.namespace_name}}
 } // namespace lima
-
-#endif // {{cookiecutter.macro_prefix}}_INTERFACE_H

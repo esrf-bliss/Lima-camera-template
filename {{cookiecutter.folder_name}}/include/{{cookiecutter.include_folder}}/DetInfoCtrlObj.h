@@ -22,21 +22,20 @@
 
 #pragma once
 
-#if !defined(LIMA_IRIS_DETINFOCTRLOBJ_H)
-#define LIMA_IRIS_DETINFOCTRLOBJ_H
-
 #include "lima/HwInterface.h"
 
-#include <iris_export.h>
+#include <{{cookiecutter.project_name}}_export.h>
 
-#include "iris/Camera.h"
+#include "{{cookiecutter.include_folder}}/Camera.h"
 
-namespace lima {
-namespace Iris {
+namespace lima
+{
+namespace {{cookiecutter.namespace_name}}
+{
 
 /// Control object providing detector info interface
-class LIMA_IRIS_EXPORT DetInfoCtrlObj : public HwDetInfoCtrlObj {
-  DEB_CLASS_NAMESPC(DebModCamera, "DetInfoCtrlObj", "Iris");
+class {{cookiecutter.uppercase_projectname}}_EXPORT DetInfoCtrlObj : public HwDetInfoCtrlObj {
+  DEB_CLASS_NAMESPC(DebModCamera, "DetInfoCtrlObj", "{{cookiecutter.project_name}}");
 
 public:
   DetInfoCtrlObj(Camera &cam) : m_cam(cam) {}
@@ -59,8 +58,5 @@ private:
   Camera &m_cam;
 };
 
-} // namespace Iris
-
+} // namespace {{cookiecutter.namespace_name}}
 } // namespace lima
-
-#endif //! defined(LIMA_IRIS_DETINFOCTRLOBJ_H)

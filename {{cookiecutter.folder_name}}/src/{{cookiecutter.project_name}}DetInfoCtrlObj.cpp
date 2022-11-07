@@ -20,10 +20,10 @@
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //###########################################################################
 
-#include "iris/DetInfoCtrlObj.h"
+#include "{{cookiecutter.namespace_name}}/DetInfoCtrlObj.h"
 
 using namespace lima;
-using namespace lima::Iris;
+using namespace lima::{{cookiecutter.namespace_name}};
 
 void DetInfoCtrlObj::getMaxImageSize(Size &max_image_size)
 {

@@ -21,18 +21,19 @@
 // You should have received a copy of the GNU General Public License
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //###########################################################################
-#ifndef {{cookiecutter.macro_prefix}}_CAMERA_H
-#define {{cookiecutter.macro_prefix}}_CAMERA_H
+
+#pragma once
 
 #include <{{cookiecutter.project_name}}_export.h>
 
+#include <lima/Debug.h>
 
 namespace lima
 {
 namespace {{cookiecutter.namespace_name}}
 {
 
-  class MYCAMERA_EXPORT Camera
+  class {{cookiecutter.uppercase_projectname}}_EXPORT Camera
   {
     DEB_CLASS_NAMESPC(DebModCamera, "Camera", "{{cookiecutter.project_name}}");
   public:
@@ -42,6 +43,3 @@ namespace {{cookiecutter.namespace_name}}
 
 } // namespace {{cookiecutter.namespace_name}}
 } // namespace lima
-
-
-#endif // {{cookiecutter.macro_prefix}}_CAMERA_H

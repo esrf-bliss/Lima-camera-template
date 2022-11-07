@@ -72,5 +72,9 @@ void Interface::getStatus(StatusType& status)
 int Interface::getNbHwAcquiredFrames()
 {
   DEB_MEMBER_FUNCT();
-  //return acq_frames;
+  
+  // TODO: get the number of acquired frames
+  int acq_frames = 0;
+  
+  return acq_frames;
 }

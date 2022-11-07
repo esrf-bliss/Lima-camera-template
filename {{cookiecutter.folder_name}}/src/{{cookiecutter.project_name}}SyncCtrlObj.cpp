@@ -20,10 +20,10 @@
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //###########################################################################
 
-#include "iris/SyncCtrlObj.h"
+#include "{{cookiecutter.namespace_name}}/SyncCtrlObj.h"
 
 using namespace lima;
-using namespace lima::Iris;
+using namespace lima::{{cookiecutter.namespace_name}};
 
 SyncCtrlObj::SyncCtrlObj(Camera &cam) : HwSyncCtrlObj(), m_cam(cam) {}
 

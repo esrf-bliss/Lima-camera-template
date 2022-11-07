@@ -22,12 +22,12 @@
 // along with this program; if not, see <http://www.gnu.org/licenses/>.
 //###########################################################################
 
-namespace {{cookiecutter.project_name}}
+namespace {{cookiecutter.namespace_name}}
 {
   class Camera
   {
 %TypeHeaderCode
-#include <{{cookiecutter.project_name}}Camera.h>
+#include <{{cookiecutter.include_folder}}/Camera.h>
 %End
 
   public:
@@ -35,6 +35,6 @@ namespace {{cookiecutter.project_name}}
     ~Camera();
 
   private:
-    Camera(const {{cookiecutter.project_name}}::Camera&);
+    Camera(const {{cookiecutter.namespace_name}}::Camera&);
   };
 };
