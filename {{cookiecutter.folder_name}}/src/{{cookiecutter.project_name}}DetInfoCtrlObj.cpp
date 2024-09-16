@@ -64,7 +64,7 @@ void DetInfoCtrlObj::getPixelSize(double &x_size, double &y_size)
 void DetInfoCtrlObj::getDetectorType(std::string &det_type)
 {
   DEB_MEMBER_FUNCT();
-  det_type = "Iris";
+  det_type = "{{cookiecutter.project_name}}";
 }
 
 void DetInfoCtrlObj::getDetectorModel(std::string &det_model)

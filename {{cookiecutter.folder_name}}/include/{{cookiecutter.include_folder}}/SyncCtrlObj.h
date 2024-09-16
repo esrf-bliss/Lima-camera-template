@@ -60,5 +60,5 @@ private:
   Camera &m_cam;
 };
 
-} // namespace Iris
+} // namespace {{cookiecutter.namespace_name}}
 } // namespace lima

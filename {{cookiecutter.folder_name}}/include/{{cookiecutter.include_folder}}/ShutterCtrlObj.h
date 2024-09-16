@@ -64,6 +64,6 @@ private:
   double m_close_time           = 0.0;
 };
 
-} // namespace Iris
+} // namespace {{cookiecutter.namespace_name}}
 
 } // namespace lima
