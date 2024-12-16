@@ -24,7 +24,7 @@
 
 #pragma once
 
-#include <{{cookiecutter.project_name}}_export.h>
+#include <{{cookiecutter.lowercase_projectname}}_export.h>
 
 #include <lima/Debug.h>
 

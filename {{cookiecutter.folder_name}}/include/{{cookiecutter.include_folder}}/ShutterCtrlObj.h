@@ -24,7 +24,7 @@
 
 #include "lima/HwInterface.h"
 
-#include <{{cookiecutter.project_name}}_export.h>
+#include <{{cookiecutter.lowercase_projectname}}_export.h>
 
 #include "{{cookiecutter.include_folder}}/Camera.h"
 
@@ -64,6 +64,6 @@ private:
   double m_close_time           = 0.0;
 };
 
-} // namespace Iris
+} // namespace {{cookiecutter.namespace_name}}
 
 } // namespace lima
