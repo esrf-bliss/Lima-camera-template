@@ -158,7 +158,7 @@ install(
 if(LIMA_ENABLE_PYTHON)
   install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/python/
-    DESTINATION "$<PATH:CMAKE_PATH,NORMALIZE,${Python3_SITEARCH}/Lima/{{cookiecutter.project_name}}"
+    DESTINATION "$<PATH:CMAKE_PATH,NORMALIZE,${Python3_SITEARCH}/Lima/{{cookiecutter.project_name}}>"
     )
   if (LIMA_ENABLE_PYTANGO_SERVER)
     add_subdirectory(tango)
