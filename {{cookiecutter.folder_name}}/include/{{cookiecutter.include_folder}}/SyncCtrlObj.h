@@ -37,7 +37,7 @@ namespace {{cookiecutter.namespace_name}}
 
 /// Control object providing camera synchronization interface
 class {{cookiecutter.uppercase_projectname}}_EXPORT SyncCtrlObj : public HwSyncCtrlObj {
-  DEB_CLASS_NAMESPC(DebModCamera, "ShutterCtrlObj", "{{cookiecutter.project_name}}");
+  DEB_CLASS_NAMESPC(DebModCamera, "SyncCtrlObj", "{{cookiecutter.project_name}}");
   
 public:
   SyncCtrlObj(Camera &simu);
