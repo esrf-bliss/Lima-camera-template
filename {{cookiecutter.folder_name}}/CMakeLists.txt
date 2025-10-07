@@ -76,7 +76,7 @@ endif()
 # TODO: Uncomment when cmake/FindSDK.cmake has been implemented
 # find_package(SDK REQUIRED)
 
-file(GLOB_RECURSE CAMERA_INCS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h")
+file(GLOB_RECURSE CAMERA_INCS "${CMAKE_CURRENT_SOURCE_DIR}/include/{{cookiecutter.lowercase_projectname}}/*.h")
 
 # Library definition
 add_library({{cookiecutter.lowercase_projectname}} SHARED
@@ -107,7 +107,7 @@ target_include_directories({{cookiecutter.lowercase_projectname}}
 target_link_libraries({{cookiecutter.lowercase_projectname}} PUBLIC limacore)
 
 # TODO: Uncomment when cmake/FindSDK.cmake has been implemented
-#target_compile_definitions({{cookiecutter.lowercase_projectname}} PUBLIC SDK::SDK)
+#target_link_libraries({{cookiecutter.lowercase_projectname}} PUBLIC SDK::SDK)
 
 if(WIN32)
   target_compile_definitions({{cookiecutter.lowercase_projectname}}
