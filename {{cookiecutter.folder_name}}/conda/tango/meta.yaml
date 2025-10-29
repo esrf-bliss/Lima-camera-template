@@ -8,7 +8,7 @@
 {% endraw %}
 
 package:
-  name: lima-camera-{{cookiecutter.project_name}}-tango
+  name: lima-camera-{{cookiecutter.lowercase_projectname}}-tango
   version: {{ "{{ version }}" }}
 
 source:
