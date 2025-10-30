@@ -24,8 +24,9 @@ requirements:
     - cmake
     - lima-core
   run:
+    - python
     - lima-tango-server
-    - lima-camera-{{cookiecutter.project_name}}
+    - lima-camera-{{cookiecutter.lowercase_projectname}} {{ version }}
 
 test:
   source_files:
